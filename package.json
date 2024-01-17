@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "clean": "rimraf dist/",
+    "copy": "copyfiles -u 1 src/**/* dist/ -e src/**/*.ts",
+    "build": "npm run clean && npm run copy && npx tsc",
+    "watch": "watch \"npm run build\" ./src --ignoreDirectoryPattern=/dist/"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.3",
+    "watch": "^1.0.2"
+  }
+}
